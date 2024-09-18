@@ -5,10 +5,10 @@ function init() {
     // Basic options for a simple Google Map
     // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
     // var myLatlng = new google.maps.LatLng(40.71751, -73.990922);
-    var myLatlng = new google.maps.LatLng(40.69847032728747, -73.9514422416687);
+    var myLatlng = new google.maps.LatLng(9.80423286110076, 126.15990183272132);
     // 39.399872
     // -8.224454
-    
+
     var mapOptions = {
         // How zoomed in you want the map to start at (always required)
         zoom: 7,
@@ -43,7 +43,7 @@ function init() {
     // Create the Google Map using out element and options defined above
     var map = new google.maps.Map(mapElement, mapOptions);
     
-    var addresses = ['New York'];
+    var addresses = ['Surigao Del Norte'];
 
     for (var x = 0; x < addresses.length; x++) {
         $.getJSON('http://maps.googleapis.com/maps/api/geocode/json?address='+addresses[x]+'&sensor=false', null, function (data) {
